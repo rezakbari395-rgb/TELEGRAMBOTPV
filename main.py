@@ -45,7 +45,7 @@ log = logging.getLogger("pvbot")
 TOKEN = os.getenv("BOT_TOKEN", "").strip()
 ADMINS = {int(x) for x in os.getenv("ADMIN_IDS", "").replace(" ", "").split(",") if x.strip().isdigit()}
 if not TOKEN or not ADMINS:
-    sys.exit("❌ فایل .env را کامل کن: 8573209748:AAFPSMzfrMXssS6uiiZydMD74_IecKMs6q8 و 1143598012")
+    sys.exit("❌ فایل .env را کامل کن: BOT_TOKEN و ADMIN_IDS")
 
 db = DB(os.getenv("DB_PATH", "bot.db"))
 bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
